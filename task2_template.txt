@@ -1,0 +1,52 @@
+{% if time_of_day == 'morning' -%}
+    {% if language == 'русский' -%} Доброе утро, {{ name }}! {% endif -%}
+    {% if language == 'английский' -%} Good morning, {{ name }}! {% endif -%}
+    {% if language == 'немецкий' -%} Guten Morgen, {{ name }}! {% endif -%}
+    {% if language == 'французский' -%} Bonjour, {{ name }}! {% endif -%}
+    {% if language == 'древнерусский' -%} Доброе утро, {{ name }}! {% endif -%}
+{% elif time_of_day == 'afternoon' -%}
+    {% if language == 'русский' -%} Добрый день, {{ name }}! {% endif -%}
+    {% if language == 'английский' -%} Good afternoon, {{ name }}! {% endif -%}
+    {% if language == 'немецкий' -%} Guten Tag, {{ name }}! {% endif -%}
+    {% if language == 'французский' -%} Bon après-midi, {{ name }}! {% endif -%}
+    {% if language == 'древнерусский' -%} Добрый день, {{ name }}! {% endif -%}
+{% elif time_of_day == 'evening' -%}
+    {% if language == 'русский' -%} Добрый вечер, {{ name }}! {% endif -%}
+    {% if language == 'английский' -%} Good evening, {{ name }}! {% endif -%}
+    {% if language == 'немецкий' -%} Guten Abend, {{ name }}! {% endif -%}
+    {% if language == 'французский' -%} Bonsoir, {{ name }}! {% endif -%}
+    {% if language == 'древнерусский' -%} Добрый вечеръ, {{ name }}! {% endif -%}
+{% else -%}
+    {% if language == 'русский' -%} Доброй ночи, {{ name }}! {% endif -%}
+    {% if language == 'английский' -%} Good night, {{ name }}! {% endif -%}
+    {% if language == 'немецкий' -%} Gute Nacht, {{ name }}! {% endif -%}
+    {% if language == 'французский' -%} Bonne nuit, {{ name }}! {% endif -%}
+    {% if language == 'древнерусский' -%} Доброй нощи, {{ name }}! {% endif -%}
+{% endif -%}
+
+{% if language == 'русский' -%}
+Рады приветствовать Вас на нашем сайте!
+Ваш логин: {{ login }}
+Ваш пароль: {{ password }}
+Вы можете изменить созданные автоматически логин и пароль в вашем личном кабинете.
+{% elif language == 'английский' -%}
+We are pleased to welcome you to our site!
+Your login: {{ login }}
+Your password: {{ password }}
+You can change your automatically generated login and password in your personal account.
+{% elif language == 'немецкий' -%}
+Wir freuen uns, Sie auf unserer Website begrüßen zu dürfen!
+Ihr Login: {{ login }}
+Ihr Passwort: {{ password }}
+Sie können Ihr automatisch erstelltes Login und Passwort in Ihrem persönlichen Konto ändern.
+{% elif language == 'французский' -%}
+Nous sommes heureux de vous accueillir sur notre site!
+Votre identifiant: {{ login }}
+Votre mot de passe: {{ password }}
+Vous pouvez modifier votre identifiant et mot de passe générés automatiquement dans votre compte personnel.
+{% elif language == 'древнерусский' -%}
+Рады привѣтствовать Васъ на нашемъ сайтѣ!
+Вашъ логинъ: {{ login }}
+Вашъ пароль: {{ password }}
+Вы можете смѣнить созданныя автоматически логинъ и пароль въ вашемъ личномъ кабинетѣ.
+{% endif %}
