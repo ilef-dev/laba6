@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Книги на {{ language }}</title>
+</head>
+<body>
+    <h1>Книги на {{ language }}</h1>
+    {% if books %}
+        <ul>
+            {% for book in books %}
+                <li>{{ book }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Книг на выбранном языке нет.</p>
+    {% endif %}
+</body>
+</html>
