@@ -13,10 +13,18 @@ def load_books(language):
                 books.append(row["Название книги"])
     return books
 
-language = input("Введите язык: ")
+language = input("Введите язык (ru/en/fr/de): ")
+
 
 books = load_books(language)
-html_content = template.render(language=language[:-2] + "ом", books=books)
+languages = {
+    "ru": "русском",
+    "en": "английском",
+    "de": "немецком",
+    "fr": "французском"
+}
+
+html_content = template.render(language=languages.get(language), books=books)
 
 with open("books_output.html", "w", encoding="utf-8") as file:
     file.write(html_content)
